@@ -22,7 +22,7 @@ directory "/opt/splunk" do
 end 
 
 remote_file "/opt/splunk.tar" do   
- source "https://rsed-cheftraining.s3.amazonaws.com/splunk-4.3.4-136012-Linux-x86_64.tar"
+ source "https://rsed-cheftraining.s3.amazonaws.com/splunk-5.0-140868-Linux-x86_64.tar"
  action :create_if_missing 
 end 
 
