@@ -15,13 +15,13 @@ user "splunk" do
 end 
 
 
-directory "/opt/splunk" do   
+directory "/opt/cheftraining" do   
  owner "splunk"
  mode "0755"   
  action :create 
 end 
 
-remote_file "/opt/splunk.tar" do   
+remote_file "/opt/cheftraining/splunk.tar" do   
  source "https://rsed-cheftraining.s3.amazonaws.com/splunk-5.0-140868-Linux-x86_64.tar"
  action :create_if_missing 
 end 
@@ -30,7 +30,7 @@ bash "install_splunk" do
  cwd "/opt"
  code <<-EOH
   tar -xvf splunk.tar
-  chown -R splunk /opt/splunk
+  chown -R splunk /opt/cheftraining
   EOH
 end 
 
