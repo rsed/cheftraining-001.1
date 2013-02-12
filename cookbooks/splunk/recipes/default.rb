@@ -30,8 +30,7 @@ bash "install_splunk" do
  cwd "/opt"
  code <<-EOH
   tar -xvf splunk.tar
-  chown -R splunk /opt/cheftraining
-  EOH
+ EOH
 end 
 
 package "tree"
